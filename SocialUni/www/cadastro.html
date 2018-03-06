@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+
+    <link rel="stylesheet" href="css/Personal.css" />
+    <link rel="stylesheet" href="css/Personal.css" />
+</head>
+<body class="body">
+    <div>
+        <center>
+            <div style="margin:5% ">
+                <label class="title">CADASTRO</label>
+            </div>
+        </center>
+        <form action="/action_page.php" method="post" class="form_position">
+            <div>
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" class="campo_icon" value="">
+            </div>
+            <div class="campo">
+                <label>Sexo</label>
+                <label>
+                    <input type="radio" name="sexo" value="masculino"> Masculino
+                </label>
+                <label>
+                    <input type="radio" name="sexo" value="feminino"> Feminino
+                </label>
+            </div>
+            <div class="campo">
+                <label for="email">E-mail</label>
+                <input type="text" id="email" name="email" class="campo_icon" value="">
+            </div>
+            <div class="campo">
+                <label for="telefone">Telefone</label>
+                <input type="text" id="telefone" name="telefone" class="form-control cel-sp-mask" placeholder="Ex.: (00) 00000-0000" class="campo_icon" value="">
+            </div>
+
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" name="cidade" class="campo_icon" value="">
+                </div>
+                <div class="campo">
+                    <label for="estado">Estado</label>
+                    <select name="estado" id="estado">
+                        <option value="">--</option>
+                    </select>
+                </div>
+            </fieldset>
+            <button type="submit" name="submit">Enviar</button>
+        </form>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/cadastro.js"></script>
+</body>
+</html>

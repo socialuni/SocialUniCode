@@ -1,0 +1,19 @@
+.icon_img {
+    width: 10%;
+    vertical-align: bottom;
+}
+
+.campo {
+    width: 70%;
+    display: inline-block;
+    background: rgba(255,255,255,0.5 );
+    border: none;
+    color: #777;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 12pt;
+}
+
+.submit_btn {
+    width: 80%;
+    margin-top: 5%;
+}
