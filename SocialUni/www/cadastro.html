@@ -39,22 +39,21 @@
             </div>
             <div class="campo">
                 <label for="telefone">Telefone</label>
-                <input type="text" id="telefone" name="telefone" class="form-control cel-sp-mask" placeholder="Ex.: (00) 00000-0000" class="campo_icon" value="">
+                <input type="text" id="telefone" name="telefone" class="campo_icon" placeholder="Ex.: (00) 00000-0000" class="campo_icon" value="">
+            </div>
+            <div class="campo">
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" name="cidade" class="campo_icon" value="">
+            </div>
+            <div class="campo">
+                <label for="estado">Estado</label>
+                <select name="estado" id="estado" class="campo_icon">
+                    <option value="">--</option>
+                </select>
             </div>
 
-            <fieldset class="grupo">
-                <div class="campo">
-                    <label for="cidade">Cidade</label>
-                    <input type="text" id="cidade" name="cidade" class="campo_icon" value="">
-                </div>
-                <div class="campo">
-                    <label for="estado">Estado</label>
-                    <select name="estado" id="estado">
-                        <option value="">--</option>
-                    </select>
-                </div>
-            </fieldset>
-            <button type="submit" name="submit">Enviar</button>
+            <input type="submit" value="ENVIAR" class="submit_btn">
+            <!--<button type="submit" name="submit" class="submit_btn">Enviar</button>-->
         </form>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
