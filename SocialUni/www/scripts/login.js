@@ -1,27 +1,34 @@
-﻿// Para uma introdução ao modelo em branco, consulte a seguinte documentação:
-// http://go.microsoft.com/fwlink/?LinkID=397704
-// Para depurar códigos no carregamento de página em dispositivos/emuladores Android ou que simulam o Cordova: inicie o aplicativo, defina os pontos de interrupção 
-// e execute "window.location.reload()" no Console do JavaScript.
-(function () {
-    "use strict";
+﻿    function onsubmitbtn(e) {
+        e.preventDefault();
 
-    document.addEventListener('deviceready', onDeviceReady.bind(this), false);
-    function onDeviceReady() {
-        // Manipular eventos de pausa e retomada do Cordova
-        document.addEventListener( 'pause', onPause.bind( this ), false );
-        document.addEventListener( 'resume', onResume.bind( this ), false );
-        
-        var parentElement = document.getElementById('deviceready');
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+        $.ajax({
+            type: "POST",
+            url: "procLogin.php",
+            data: {
+                acao: 'LoginWeb',
+                usuario: $("#user").val(),
+                senha: $("#password").val()
+            },
+            async: false,
+            dataType: "json",
+            success: function(json) {
 
-    };
+                if (json.result == true) {
+                    //redireciona o usuario para pagina
+                    $("#user").html(json.dados.nome);
 
-    function onPause() {
-    };
+                    $.mobile.changePage("#index",
+                        {
+                            transition: "slidefade"
+                        });
 
-    function onResume() {
-    };
-} )();
+                } else {
+                    alert(json.msg);
+                }
+            },
+            error: function(xhr, e, t) {
+                console.log(xhr.responseText);
+            }
+        });
+    }
+

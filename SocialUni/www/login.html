@@ -9,13 +9,14 @@
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
 
     <link rel="stylesheet" href="css/Personal.css" />
+    <script src="scripts/login.js"></script>
 </head>
 <body class="body">
     <div>
         <div>
             <img src="images/logo.png" class="logo_img_medium">
         </div>
-        <form action="/action_page.php" class="form_position">
+        <form action="" class="form_position">
             <div>
                 <img src="images/user.png" class="icon_img" style="width: 10%;  vertical-align: bottom;">
                 <input type="text" class="campo_icon" name="user" style="width: 70%; display: inline-block;">
@@ -25,21 +26,19 @@
                 <input type="text" class="campo_icon" name="password" style="width: 70%; display: inline-block;">
             </div>
             <div>
-                <input type="submit" value="ENTRAR" class="submit_btn">
+                <input type="button" onclick="onsubmitbtn()" value="ENTRAR" class="submit_btn">
             </div>
             <div style="text-align: center; width: 80%">
                 <label style="margin: 5px; font-size: 3vw;  display: inline-block;"> *ESQUECI MINHA SENHA* |</label><a href="cadastro.html" class="link">CADASTRAR</a>
             </div>
             <!--
-                TO DO: LOGIN COM REDES SOCIAIS 
-                <div>
+            TO DO: LOGIN COM REDES SOCIAIS
+            <div>
                 <img src="images/facebook-logo-icon.png" class="icon_img"/>
                 <img src="images/Google-Plus-icon.png" class="icon_img"/>
             </div>-->
         </form>
     </div>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
-    <script type="text/javascript" src="scripts/login.js"></script>
+ 
 </body>
 </html>
