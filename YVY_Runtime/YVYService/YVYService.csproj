@@ -284,6 +284,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Performance\Microsoft.ServiceBus.MessagingPerformanceCounters.man" />
+    <Content Include="Connected Services\cs266d33925711cx4830x9d9AzureStorage\ConnectedService.json" />
     <None Include="Properties\PublishProfiles\YVY - Web Deploy.pubxml" />
   </ItemGroup>
   <ItemGroup>

@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.OData;
+using Autofac.Features.Metadata;
 using Microsoft.Azure.Mobile.Server;
 using Microsoft.Azure.Mobile.Server.Tables;
 using Microsoft.WindowsAzure.Mobile.Service;
@@ -33,10 +34,10 @@ namespace YVYService.Controllers
         }
 
         // PATCH tables/TodoItem/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        //public Task<TodoItem> PatchTodoItem(string id,  Delta<TodoItem> patch)
-        //{
-        //    return UpdateAsync(id, patch);
-        //}
+        public Task<TodoItem> PatchTodoItem(string id, Delta<TodoItem> patch)
+        {
+            return UpdateAsync(id, patch);
+        }
 
         // POST tables/TodoItem
         public async Task<IHttpActionResult> PostTodoItem(TodoItem item)

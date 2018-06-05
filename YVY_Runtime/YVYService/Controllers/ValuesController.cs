@@ -16,11 +16,7 @@ namespace YVYService.Controllers
             MobileAppSettingsDictionary settings = this.Configuration.GetMobileAppSettingsProvider().GetMobileAppSettings();
             ITraceWriter traceWriter = this.Configuration.Services.GetTraceWriter();
 
-            string host = settings.HostName ?? "localhost";
-            string greeting = "Hello from " + host;
-            
-            //traceWriter.Info(greeting);
-            return greeting;
+            return null;
         }
 
         // POST api/values

@@ -3,7 +3,6 @@
 // Para depurar códigos no carregamento de página em dispositivos/emuladores Android ou que simulam o Cordova: inicie o aplicativo, defina os pontos de interrupção 
 // e execute "window.location.reload()" no Console do JavaScript.
 
-var YVYClient = new WindowsAzure.MobileServiceClient("https://yvy.azurewebsites.net");
 
 (function () {
     "use strict";
@@ -36,6 +35,8 @@ function onclickProximo() {
     //        var id = insertedItem.id;
     //    }, failure);
     debugger;
+
+    var YVYClient = new WindowsAzure.MobileServiceClient("https://yvy.azurewebsites.net");
     var item = { test: 'Item 1', complete: false };
     YVYClient.getTable('TodoItem').insert(item);
     
