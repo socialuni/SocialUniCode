@@ -1,5 +1,7 @@
-﻿var $MakeSafeIdentifierName(ServiceInstance.Name)$Client;
+﻿debugger
+
+var YVYClient;
 document.addEventListener("deviceready", function () {
-    $MakeSafeIdentifierName(ServiceInstance.Name)$Client = new WindowsAzure.MobileServiceClient(
-                    "https://$ServiceInstance.ApplicationUrl$");
+    YVYClient = new WindowsAzure.MobileServiceClient(
+                    "https://yvy.azurewebsites.net");
 });

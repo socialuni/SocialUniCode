@@ -1,34 +1,51 @@
-﻿    function onsubmitbtn(e) {
-        e.preventDefault();
+﻿function onsubmitbtn(e) {
+    e.preventDefault();
 
-        $.ajax({
-            type: "POST",
-            url: "procLogin.php",
-            data: {
-                acao: 'LoginWeb',
-                usuario: $("#user").val(),
-                senha: $("#password").val()
-            },
-            async: false,
-            dataType: "json",
-            success: function(json) {
+    var us = $('#txtUsuario').val();
+    var pwd = $('#txtSenha').val();
+    ObterToken(us, pwd);
 
-                if (json.result == true) {
-                    //redireciona o usuario para pagina
-                    $("#user").html(json.dados.nome);
+    $.ajax({
+        type: "POST",
+        url: "",
+        data: {
+            acao: 'LoginWeb',
+            usuario: $("#user").val(),
+            senha: $("#password").val()
+        },
+        async: false,
+        dataType: "json",
+        success: function (json) {
 
-                    $.mobile.changePage("#index",
-                        {
-                            transition: "slidefade"
-                        });
+            if (json.result == true) {
+                //redireciona o usuario para pagina
+                $("#user").html(json.dados.nome);
 
-                } else {
-                    alert(json.msg);
-                }
-            },
-            error: function(xhr, e, t) {
-                console.log(xhr.responseText);
+                $.mobile.changePage("#index",
+                    {
+                        transition: "slidefade"
+                    });
+
+            } else {
+                alert(json.msg);
             }
-        });
-    }
+        },
+        error: function (xhr, e, t) {
+            console.log(xhr.responseText);
+        }
+    });
+}
 
+function ObterToken(us, pwd) {
+    var url = urlUpload.replace("/api/", "/token");
+    loginData = "grant_type=password&UserName=" + us + "&Password=" + pwd;
+
+    $.post(url, loginData).success(saveAccessToken);
+}
+
+
+function saveAccessToken(data) {
+    tokenType = data.token_type;
+    accessToken = data.access_token;
+    expireIn = data.expires_in;
+}

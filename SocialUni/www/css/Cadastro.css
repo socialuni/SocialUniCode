@@ -1,0 +1,159 @@
+.icon_img {
+    width: 10%;
+    vertical-align: bottom;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="email"], input[type="date"], select {
+    height: 2.5em;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="date"], select, textarea {
+    -webkit-appearance: none;
+    outline: 0;
+    padding-left: 20%;
+    text-decoration: none;
+    color: #6e6e6e;
+    opacity: 0.4;
+}
+
+.figuras {
+    display: inline-block;
+}
+
+.icon_gift {
+    background-image: url('../images/icon_gift.png');
+    background-size: contain;
+}
+
+.icon_phone {
+    background-image: url('../images/icon_phone.png');
+    background-size: contain;
+}
+
+.icon_documento {
+    background-image: url('../images/id-card.png');
+    background-size: contain;
+}
+
+
+.icon_curso {
+    background-image: url('../images/icon_file.png');
+    background-size: contain;
+}
+
+.icon_home {
+    background-image: url('../images/icon_home.png');
+    background-size: contain;
+}
+
+.icon_pessoa {
+    background-image: url('../images/icon_user.png');
+    background-size: contain;
+}
+
+.icon_senha {
+    background-image: url('../images/icon_cadeado.png');
+    background-size: contain;
+}
+
+.icon_email {
+    background-image: url('../images/icon_message.png');
+    background-size: contain;
+}
+
+.campo_icon {
+    width: 100%;
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    padding-left: 24px;
+    line-height: 16px;
+    border: none;
+    border-radius: 7px;
+    /*border-bottom: solid 2px #ffffffba;*/
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 12pt;
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.campo {
+    margin-bottom: 1em;
+}
+
+    .campo label {
+        margin-bottom: 0.2em;
+        color: #ffffff;
+        display: block;
+    }
+
+        .campo label.checkbox {
+            display: inline-block;
+        }
+
+.title {
+    display: inline-block;
+    color: #0085d0;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0 0 0 5%;
+    width: 25%;
+    height: 25%;
+}
+
+.submit_btn {
+    width: 70%;
+    margin: 0 10% 5% 10%;
+}
+
+body {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-user-select: none;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    background-color: #62d7d5;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 1em;
+}
+
+.logo_img_medium {
+    margin: 20% 30% 5% 30%;
+    width: 40%;
+    height: 40%;
+}
+
+.form_position {
+    padding: 0 15% 5% 15%;
+    width: 100%;
+    height: 100%;
+}
+
+.form_animacao {
+    padding: 0 15% 5% 15%;
+    width: 100%;
+    height: 100%;
+}
+.padding {
+    padding: 0 15% 5% 15%;
+}
+
+.button {
+    color: #ffffff;
+    height: 2em;
+    background-color: rgba(225, 225, 225, 0 );
+    border-radius: 7px;
+    border: solid 1px #ffffffba;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 12pt;
+}

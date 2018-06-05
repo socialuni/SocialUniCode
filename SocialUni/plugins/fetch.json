@@ -10,7 +10,7 @@
     "cordova-plugin-ms-azure-mobile-apps": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-ms-azure-mobile-apps"
+            "id": "cordova-plugin-ms-azure-mobile-apps@~2.0.1"
         },
         "is_top_level": true,
         "variables": {}
